@@ -2,10 +2,11 @@ import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 
 export default function PostContainer(props) {
-	const comments = props.post.comments;
+	const post = props.post;
+	const comments = post.comments;
 	return (
 		<div>
-			<CommentSection comment={comments} />
+			<CommentSection comments={comments} />
 		</div>
 	);
 }
