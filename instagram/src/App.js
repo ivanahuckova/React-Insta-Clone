@@ -12,12 +12,14 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div className="environment-container">
-				<div className="app-container">
-					<SearchBar />
-					{this.state.dummyData.map(post => {
-						return <PostContainer post={post} key={post.timestamp} />;
-					})}
+			<div>
+				<SearchBar />
+				<div className="environment-container">
+					<div className="app-container">
+						{this.state.dummyData.map(post => {
+							return <PostContainer post={post} key={post.timestamp} />;
+						})}
+					</div>
 				</div>
 			</div>
 		);
