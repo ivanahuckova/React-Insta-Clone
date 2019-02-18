@@ -14,10 +14,13 @@ export default function CommentSection(props) {
 					<img className="commentsection-icon" src="https://www.freeiconspng.com/uploads/talking-mouth-icon-10.png" alt="instagram icon" />
 				</div>
 				<div>{likes} likes</div>
+				{comments.map((comment, idx) => {
+					return <Comment comment={comment} key={idx} />;
+				})}
+				<div className="commentsection-new-comment-container">
+					<input placeholder="Add new comment..." />
+				</div>
 			</div>
-			{comments.map((comment, idx) => {
-				return <Comment comment={comment} key={idx} />;
-			})}
 		</div>
 	);
 }

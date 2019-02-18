@@ -7,9 +7,10 @@ export default function Comment(props) {
 	const text = props.comment.text;
 	return (
 		<div className="comment-box">
-			<h3>{username}</h3>
-			<div>{text}</div>
-			<input placeholder="new comment" />
+			<div>
+				<span className="comments-username">{username}</span>
+				{text}
+			</div>
 		</div>
 	);
 }

@@ -1,6 +1,6 @@
 .searchbar-container {
 	background-color: white;
-	padding: 15px;
+	padding: 15px 15px 20px 15px;
 	display: flex;
 	justify-content: space-between;
 	border-bottom: 0.5px solid #b9b8b7;

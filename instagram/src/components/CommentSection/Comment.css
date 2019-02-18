@@ -17,7 +17,7 @@
 }
 
 .comment-box {
-	padding: 10px;
+	padding: 10px 0;
 	border: 0.5px dashed white;
 }
 
@@ -26,4 +26,21 @@
 	border-radius: 5px;
 	border: none;
 	margin-top: 10px;
+}
+
+.comments-username {
+	font-weight: 700;
+	padding-right: 5px;
+}
+
+.commentsection-new-comment-container {
+	padding: 10px 0;
+}
+
+.commentsection-new-comment-container input {
+	width: 100%;
+	border: none;
+	border-top: 0.5px solid #b9b8b7;
+	padding-top: 15px;
+	font-size: 0.8rem;
 }
