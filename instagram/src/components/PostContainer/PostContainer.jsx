@@ -8,8 +8,14 @@ export default function PostContainer(props) {
 	const comments = post.comments;
 	return (
 		<div className="postcontainer-container">
-			<div className="post-container">Postcontainer</div>
-			<CommentSection comments={comments} />
+			<div className="post-user-container">
+				<img className="post-thumbnail" src={post.thumbnailUrl} alt="thumbnail of user" />
+				<div className="post-username">{post.username}</div>
+			</div>
+			<div className="post-image-container">
+				<img className="post-image" src={post.imageUrl} alt="users added" />
+			</div>
+			<CommentSection comments={comments} likes={post.likes} />
 		</div>
 	);
 }

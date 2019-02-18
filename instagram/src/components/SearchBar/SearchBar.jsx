@@ -20,19 +20,11 @@ export default function SearchBar(props) {
 				<input className="searchbar-input" placeholder="🔍Search" />
 			</div>
 			<div className="searchbar-right-container">
+				<img className="searchbar-icon" src="https://www.freeiconspng.com/uploads/compass-icon-5.png" alt="instagram icon" />
+				<img className="searchbar-icon" src="https://www.freeiconspng.com/uploads/heart-outline-19.png" alt="instagram icon" />
 				<img
 					className="searchbar-icon"
-					src="http://www.logospng.com/images/1/instagram-clipart-png-transparent-background-clipground-1936.png"
-					alt="instagram icon"
-				/>
-				<img
-					className="searchbar-icon"
-					src="http://www.logospng.com/images/1/instagram-clipart-png-transparent-background-clipground-1936.png"
-					alt="instagram icon"
-				/>
-				<img
-					className="searchbar-icon"
-					src="http://www.logospng.com/images/1/instagram-clipart-png-transparent-background-clipground-1936.png"
+					src="https://www.freeiconspng.com/uploads/person-outline-icon-png-person-outline-icon-png-person-17.png"
 					alt="instagram icon"
 				/>
 			</div>
