@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Comment from "./Comment";
 
 export default function CommentSection(props) {
@@ -11,3 +12,7 @@ export default function CommentSection(props) {
 		</div>
 	);
 }
+
+CommentSection.propTypes = {
+	comments: PropTypes.array.isRequired
+};
