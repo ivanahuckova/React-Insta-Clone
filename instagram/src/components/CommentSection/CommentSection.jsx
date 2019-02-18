@@ -4,7 +4,7 @@ import Comment from "./Comment";
 export default function CommentSection(props) {
 	const comments = props.comments;
 	return (
-		<div>
+		<div className="commentsection-container">
 			{comments.map((comment, idx) => {
 				return <Comment comment={comment} key={idx} />;
 			})}

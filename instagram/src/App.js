@@ -11,10 +11,12 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<div>
-				{this.state.dummyData.map(post => {
-					return <PostContainer post={post} key={post.timestamp} />;
-				})}
+			<div className="environment-container">
+				<div className="app-container">
+					{this.state.dummyData.map(post => {
+						return <PostContainer post={post} key={post.timestamp} />;
+					})}
+				</div>
 			</div>
 		);
 	}
