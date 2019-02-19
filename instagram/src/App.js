@@ -41,7 +41,7 @@ export default class App extends Component {
 							if (post.username.indexOf(this.state.searchValue) === -1) {
 								return null;
 							}
-							return <PostContainer post={post} timestamp={post.timestamp} key={post.timestamp} comments={post.comments} likes={post.likes} />;
+							return <PostContainer post={post} key={post.timestamp} />;
 						})}
 					</div>
 				</div>

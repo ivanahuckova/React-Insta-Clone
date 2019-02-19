@@ -1,7 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+//components
 import LogosContainer from "./components/LogosContainer";
 import SearchContainer from "./components/SearchContainer";
 import ActionItemsContainer from "./components/ActionItemsContainer";
+
+//css
 import "./SearchBar.css";
 
 export default function SearchBar(props) {
@@ -18,3 +23,8 @@ export default function SearchBar(props) {
 		</div>
 	);
 }
+
+SearchBar.propTypes = {
+	searchValue: PropTypes.string.isRequired,
+	handleSearch: PropTypes.func.isRequired
+};

@@ -1,4 +1,4 @@
-/* Searchbar full container */
+/* Searchbar.jsx full container */
 .searchbar-environment-container {
 	box-sizing: border-box;
 	background-color: white;
@@ -18,7 +18,7 @@
 	flex-direction: row;
 }
 
-/* Searchbar left part of the container */
+/* Searchbar LogosContainer.jsx (left) part of the container */
 .searchbar-left-container {
 	width: 20%;
 	display: flex;
@@ -36,7 +36,7 @@
 	cursor: pointer;
 }
 
-/* Searchbar middle part of the container */
+/* Searchbar SearchContainer.jsx (middle) part of the container */
 .searchbar-middle-container {
 	width: 50%;
 	display: flex;
@@ -56,7 +56,7 @@
 	font-size: 0.9rem;
 }
 
-/* Searchbar right part of the container */
+/* Searchbar ActionItemsContainer.jsx (right) part of the container */
 .searchbar-right-container {
 	width: 20%;
 	display: flex;

@@ -1,34 +1,40 @@
 import React from "react";
 import PropTypes from "prop-types";
+
+//components
+import UserHeadingContainer from "./components/UserHeadingContainer";
+import ImageContainer from "./components/ImageContainer";
+import TimeStampContainer from "./components/TimeStampContainer";
 import CommentSection from "../CommentSection/CommentSection";
-import "./Post.css";
+
+//css
+import "./PostContainer.css";
 
 export default function PostContainer(props) {
-	const post = props.post;
-	const comments = post.comments;
-	const timestamp = post.timestamp;
 	return (
 		<div className="postcontainer-container">
-			<div className="post-user-container">
-				<img className="post-thumbnail" src={post.thumbnailUrl} alt="thumbnail of user" />
-				<div className="post-username">{post.username}</div>
-			</div>{" "}
-			<div className="post-image-container">
-				<img className="post-image" src={post.imageUrl} alt="users added" />
-			</div>
-			<div className="timestamp">{timestamp}</div>
-			<CommentSection comments={comments} likes={post.likes} />
+			{/* User Heading Contaienr - consists of name and thumbnail image of user  */}
+			<UserHeadingContainer thumbnailUrl={props.post.thumbnailUrl} username={props.post.username} />
+
+			{/* Image Container - consists of posted image  */}
+			<ImageContainer imageUrl={props.post.imageUrl} />
+
+			{/* Time Stamp Container - consists of time stamp */}
+			<TimeStampContainer timestamp={props.post.timestamp} />
+
+			{/* Comment Section Container - all comments related stuff */}
+			<CommentSection comments={props.post.comments} likes={props.post.likes} />
 		</div>
 	);
 }
 
 PostContainer.propTypes = {
 	post: PropTypes.shape({
-		username: PropTypes.string,
-		thumbnailUrl: PropTypes.string,
-		imageUrl: PropTypes.string,
-		likes: PropTypes.number,
-		timestamp: PropTypes.string,
-		comments: PropTypes.array
+		username: PropTypes.string.isRequired,
+		thumbnailUrl: PropTypes.string.isRequired,
+		imageUrl: PropTypes.string.isRequired,
+		likes: PropTypes.number.isRequired,
+		timestamp: PropTypes.string.isRequired,
+		comments: PropTypes.array.isRequired
 	}).isRequired
 };
