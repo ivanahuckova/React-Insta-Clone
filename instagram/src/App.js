@@ -29,7 +29,7 @@ export default class App extends Component {
 				<div className="environment-container">
 					<div className="app-container">
 						{this.state.dummyData.map(post => {
-							return <PostContainer post={post} key={post.timestamp} />;
+							return <PostContainer post={post} key={post.timestamp} comments={post.comments} />;
 						})}
 					</div>
 				</div>
@@ -37,38 +37,3 @@ export default class App extends Component {
 		);
 	}
 }
-
-// import React, { Component } from 'react';
-
-// class App extends Component {
-
-//   constructor(props){
-//     super(props);
-//     this.state = {
-//       data: 'Jordan Belfort'
-//     }
-//   }
-
-//   getData(){
-//     setTimeout(() => {
-//       console.log('Our data is fetched');
-//       this.setState({
-//         data: 'Hello WallStreet'
-//       })
-//     }, 1000)
-//   }
-
-//   componentDidMount(){
-
-//   }
-
-//   render() {
-//     return(
-//       <div>
-//       {this.state.data}
-//     </div>
-//     )
-//   }
-// }
-
-// export default App;
