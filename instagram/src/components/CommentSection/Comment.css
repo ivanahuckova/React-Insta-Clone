@@ -8,13 +8,27 @@
 .commentsection-icons-container {
 	display: flex;
 	justify-content: flex-start;
+	align-items: center;
 }
 
 .commentsection-icon {
-	width: 7%;
-	height: 7%;
+	width: 5%;
+	height: 5%;
 	padding: 10px 5px 10px 0;
 	cursor: pointer;
+}
+.bubble {
+	width: 7%;
+	height: 7%;
+}
+
+.display-true {
+	display: block;
+	cursor: pointer;
+}
+
+.display-none {
+	display: none;
 }
 
 .comment-box {
