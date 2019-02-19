@@ -1,9 +1,11 @@
+/* PostContainer.jsx full container */
 .postcontainer-container {
 	background-color: white;
 	margin-bottom: 50px;
 	border: 1px solid #dbdbdb;
 }
 
+/* UserHeadingContainer.jsx container */
 .post-user-container {
 	padding: 20px;
 	display: flex;
@@ -22,6 +24,7 @@
 	font-weight: 800;
 }
 
+/* ImageContainer.jsx container */
 .post-image-container {
 	width: 100%;
 	display: flex;
@@ -34,6 +37,7 @@
 	width: 100%;
 }
 
+/* TimeStampContainer.jsx container */
 .timestamp {
 	color: #b9b8b7;
 	font-weight: lighter;

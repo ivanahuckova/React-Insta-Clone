@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Comment.css";
+import "../CommentSection.css";
 
 export default function Comment(props) {
 	const username = props.comment.username;

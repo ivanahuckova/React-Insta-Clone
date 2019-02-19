@@ -1,5 +1,5 @@
 import React from "react";
-import "./Comment.css";
+import "../CommentSection.css";
 
 export default function NewComment(props) {
 	const inputCommentValue = props.inputCommentValue;
