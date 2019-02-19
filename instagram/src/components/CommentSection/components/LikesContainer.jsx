@@ -6,7 +6,7 @@ import "../CommentSection.css";
 
 export default function LikesContainer(props) {
 	const likes = props.likes;
-	return <div>{likes} likes</div>;
+	return <div className="likes">{likes} likes</div>;
 }
 
 LikesContainer.prototype = {

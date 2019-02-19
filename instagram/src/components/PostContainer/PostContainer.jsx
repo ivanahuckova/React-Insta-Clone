@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 //components
-import UserHeadingContainer from "./components/UserHeadingContainer";
+import UserPostHeading from "./components/UserPostHeading";
 import ImageContainer from "./components/ImageContainer";
-import TimeStampContainer from "./components/TimeStampContainer";
+import TimeStamp from "./components/TimeStamp";
 import CommentSection from "../CommentSection/CommentSection";
 
 //css
@@ -14,13 +14,13 @@ export default function PostContainer(props) {
 	return (
 		<div className="postcontainer-container">
 			{/* User Heading Contaienr - consists of name and thumbnail image of user  */}
-			<UserHeadingContainer thumbnailUrl={props.post.thumbnailUrl} username={props.post.username} />
+			<UserPostHeading thumbnailUrl={props.post.thumbnailUrl} username={props.post.username} />
 
 			{/* Image Container - consists of posted image  */}
 			<ImageContainer imageUrl={props.post.imageUrl} />
 
 			{/* Time Stamp Container - consists of time stamp */}
-			<TimeStampContainer timestamp={props.post.timestamp} />
+			<TimeStamp timestamp={props.post.timestamp} />
 
 			{/* Comment Section Container - all comments related stuff */}
 			<CommentSection comments={props.post.comments} likes={props.post.likes} />

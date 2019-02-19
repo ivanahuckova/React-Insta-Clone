@@ -67,14 +67,13 @@ export default class CommentSection extends React.Component {
 					})}
 
 					{/* ANewComment Component: Add new comment section and component*/}
-					<div className="commentsection-new-comment-container">
-						<NewComment
-							addNewComment={this.addNewComment}
-							inputCommentValue={this.state.inputCommentValue}
-							handleAddNewInput={this.handleAddNewInput}
-							clearInput={this.clearInput}
-						/>
-					</div>
+
+					<NewComment
+						addNewComment={this.addNewComment}
+						inputCommentValue={this.state.inputCommentValue}
+						handleAddNewInput={this.handleAddNewInput}
+						clearInput={this.clearInput}
+					/>
 				</div>
 			</div>
 		);

@@ -13,8 +13,10 @@ export default function NewComment(props) {
 	};
 
 	return (
-		<form onSubmit={handleAddNewComment}>
-			<input value={inputCommentValue} onChange={handleAddNewInput} placeholder="Add new comment..." />
-		</form>
+		<div className="commentsection-new-comment-container">
+			<form onSubmit={handleAddNewComment}>
+				<input value={inputCommentValue} onChange={handleAddNewInput} placeholder="Add new comment..." />
+			</form>
+		</div>
 	);
 }

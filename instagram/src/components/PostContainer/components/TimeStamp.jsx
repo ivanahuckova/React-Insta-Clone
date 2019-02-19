@@ -4,11 +4,11 @@ import PropTypes from "prop-types";
 //css
 import "../PostContainer.css";
 
-export default function TimeStampContainer(props) {
+export default function TimeStamp(props) {
 	const timestamp = props.timestamp;
 	return <div className="timestamp">{timestamp}</div>;
 }
 
-TimeStampContainer.prototype = {
+TimeStamp.prototype = {
 	timestamp: PropTypes.string.isRequired
 };

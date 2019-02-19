@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 //css
 import "../PostContainer.css";
 
-export default function UserHeadingContainer(props) {
+export default function UserPostHeading(props) {
 	const username = props.username;
 	const thumbnailUrl = props.thumbnailUrl;
 	return (
@@ -15,7 +15,7 @@ export default function UserHeadingContainer(props) {
 	);
 }
 
-UserHeadingContainer.prototype = {
+UserPostHeading.prototype = {
 	thumbnailUrl: PropTypes.string.isRequired,
 	username: PropTypes.string.isRequired
 };

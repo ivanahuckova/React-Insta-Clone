@@ -5,7 +5,12 @@
 
 /* LikesContainer.jsx container */
 .commentsection-icons-likes-container {
-	padding: 10px;
+	padding: 0 10px 5px 10px;
+}
+
+.likes {
+	font-weight: bold;
+	padding-bottom: 10px;
 }
 
 /* ActionItems.jsx container */
@@ -18,7 +23,8 @@
 .commentsection-icon {
 	width: 7%;
 	height: 7%;
-	padding: 10px 5px 10px 0;
+	padding: 10px 10px 10px 0;
+	margin-left: -10px;
 	cursor: pointer;
 }
 .bubble {
@@ -63,5 +69,6 @@
 	border: none;
 	border-top: 0.5px solid #b9b8b7;
 	padding-top: 15px;
-	font-size: 0.8rem;
+	font-size: 0.9rem;
+	line-height: 2;
 }
