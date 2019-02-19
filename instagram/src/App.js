@@ -13,14 +13,10 @@ export default class App extends Component {
 		};
 	}
 
-	getData() {
+	componentDidMount() {
 		this.setState({
 			dummyData: dummyData
 		});
-	}
-
-	componentDidMount() {
-		this.getData();
 	}
 
 	handleSearch = input => {
