@@ -1,8 +1,9 @@
 import React, { Component } from "react";
+import Authenticate from "./components/authentication/Authenticate";
 import PostsPage from "./components/PostContainer/PostsPage";
 import "./App.css";
 
-export default class App extends Component {
+class App extends Component {
 	constructor(props) {
 		super(props);
 	}
@@ -11,3 +12,6 @@ export default class App extends Component {
 		return <PostsPage />;
 	}
 }
+
+const Authenticated = Authenticate(App);
+export default Authenticated;
