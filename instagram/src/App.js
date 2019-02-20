@@ -20,7 +20,7 @@ class Login extends Component {
 	}
 
 	render() {
-		return <LoginPage />;
+		return <LoginPage {...this.props} />;
 	}
 }
 
