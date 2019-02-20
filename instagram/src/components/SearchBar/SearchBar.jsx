@@ -18,7 +18,7 @@ export default function SearchBar(props) {
 				{/* Middle part of navbar - search bar */}
 				<SearchContainer searchValue={props.searchValue} handleSearch={props.handleSearch} />
 				{/* Right part of navbar - action items icons */}
-				<ActionItemsContainer />
+				<ActionItemsContainer logout={props.logout} />
 			</div>
 		</div>
 	);
@@ -26,5 +26,6 @@ export default function SearchBar(props) {
 
 SearchBar.propTypes = {
 	searchValue: PropTypes.string.isRequired,
-	handleSearch: PropTypes.func.isRequired
+	handleSearch: PropTypes.func.isRequired,
+	logout: PropTypes.func
 };

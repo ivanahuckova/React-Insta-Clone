@@ -12,13 +12,14 @@ export default function authenticate(Component, LoginComponent) {
 		}
 
 		login = () => {
-			this.setState({ isAuthed: true });
 			localStorage.setItem("isAuthed", "true");
+			let isAuthed = !!localStorage.getItem("isAuthed");
+			this.setState({ isAuthed });
 		};
 
 		logout = () => {
-			this.setState({ isAuthed: false });
 			localStorage.setItem("isAuthed", "false");
+			this.setState({ isAuthed: false });
 		};
 
 		handleAddNameInput = input => {
@@ -34,6 +35,18 @@ export default function authenticate(Component, LoginComponent) {
 			});
 			localStorage.setItem("loginPassword", JSON.stringify({ input }));
 		};
+
+		componentDidMount() {
+			const isAuthed = !!localStorage.getItem("isAuthed");
+			this.setState({ isAuthed });
+		}
+
+		// componentDidUpdate() {
+		// 	const isAuthed = !!localStorage.getItem("isAuthed");
+		// 	if (this.state.isAuthed !== isAuthed) {
+		// 		this.setState({ isAuthed });
+		// 	}
+		// }
 
 		render() {
 			if (this.state.isAuthed) {

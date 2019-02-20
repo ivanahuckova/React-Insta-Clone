@@ -33,7 +33,7 @@ export default class PostsPage extends Component {
 		return (
 			<div>
 				{/* Search Bar */}
-				<SearchBar searchValue={this.state.searchValue} handleSearch={this.handleSearch} />
+				<SearchBar searchValue={this.state.searchValue} handleSearch={this.handleSearch} logout={this.props.logout} />
 				<div className="environment-container">
 					<div className="app-container">
 						{/* Post Container + filter/search logic */}
