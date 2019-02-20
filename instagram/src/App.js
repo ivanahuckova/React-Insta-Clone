@@ -1,28 +1,20 @@
 import React, { Component } from "react";
 import LoginPage from "./components/LoginPage/LoginPage";
-import Authenticate from "./components/authentication/Authenticate";
-import PostsPage from "./components/PostContainer/PostsPage";
+import Authenticate from "./components/Authentication/Authenticate";
+import PostsPage from "./components/PostPage/PostsPage";
 import "./App.css";
 
-class App extends Component {
-	constructor(props) {
-		super(props);
-	}
-
+class Posts extends Component {
 	render() {
-		return <PostsPage />;
+		return <PostsPage {...this.props} />;
 	}
 }
 
 class Login extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return <LoginPage {...this.props} />;
 	}
 }
 
-const AuthenticatedApp = Authenticate(App, Login);
-export default AuthenticatedApp;
+const App = Authenticate(Posts, Login);
+export default App;

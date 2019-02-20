@@ -23,7 +23,7 @@ export default function PostContainer(props) {
 			<TimeStamp timestamp={props.post.timestamp} />
 
 			{/* Comment Section Container - all comments related stuff */}
-			<CommentSection comments={props.post.comments} likes={props.post.likes} />
+			<CommentSection comments={props.post.comments} likes={props.post.likes} username={props.username} />
 		</div>
 	);
 }
@@ -36,5 +36,6 @@ PostContainer.propTypes = {
 		likes: PropTypes.number.isRequired,
 		timestamp: PropTypes.string.isRequired,
 		comments: PropTypes.array.isRequired
-	}).isRequired
+	}).isRequired,
+	username: PropTypes.string
 };

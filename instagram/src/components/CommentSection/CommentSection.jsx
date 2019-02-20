@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 
 //components
-import ActionItemsContainer from "./components/ActionItemsContainer";
-import LikesContainer from "./components/LikesContainer";
-import Comment from "./components/Comment";
-import NewComment from "./components/NewComment";
+import ActionItemsContainer from "./CommentSectionComponents/ActionItemsContainer";
+import LikesContainer from "./CommentSectionComponents/LikesContainer";
+import Comment from "./CommentSectionComponents/Comment";
+import NewComment from "./CommentSectionComponents/NewComment";
 
 //css
 import "./CommentSection.css";
@@ -24,7 +24,7 @@ export default class CommentSection extends React.Component {
 	//Functions addNewComment && handleAddNewInput && clearInput are handling add new comments
 	addNewComment = message => {
 		this.setState(currState => ({
-			comments: currState.comments.concat({ username: "test", text: message })
+			comments: currState.comments.concat({ username: this.props.username, text: message })
 		}));
 	};
 
@@ -82,5 +82,6 @@ export default class CommentSection extends React.Component {
 
 CommentSection.propTypes = {
 	comments: PropTypes.array.isRequired,
-	likes: PropTypes.number.isRequired
+	likes: PropTypes.number.isRequired,
+	username: PropTypes.string
 };
