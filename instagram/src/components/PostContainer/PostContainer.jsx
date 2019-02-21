@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 //components
 import UserPostHeading from "./components/UserPostHeading";
@@ -12,7 +13,7 @@ import "./PostContainer.css";
 
 export default function PostContainer(props) {
 	return (
-		<div className="postcontainer-container">
+		<StyledPostContainer>
 			{/* User Heading Contaienr - consists of name and thumbnail image of user  */}
 			<UserPostHeading thumbnailUrl={props.post.thumbnailUrl} username={props.post.username} />
 
@@ -24,7 +25,7 @@ export default function PostContainer(props) {
 
 			{/* Comment Section Container - all comments related stuff */}
 			<CommentSection comments={props.post.comments} likes={props.post.likes} username={props.username} />
-		</div>
+		</StyledPostContainer>
 	);
 }
 
@@ -39,3 +40,9 @@ PostContainer.propTypes = {
 	}).isRequired,
 	username: PropTypes.string
 };
+
+const StyledPostContainer = styled.div`
+	background-color: white;
+	margin-bottom: 50px;
+	border: 1px solid #dbdbdb;
+`;
