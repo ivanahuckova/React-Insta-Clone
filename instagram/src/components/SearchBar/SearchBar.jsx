@@ -9,7 +9,7 @@ import ActionItemsContainer from "./components/ActionItemsContainer";
 
 export default function SearchBar(props) {
 	return (
-		<StyledEnvironmentContainer>
+		<Header>
 			<StyledSearchBar>
 				{/* Left part of the navbar - logos */}
 				<LogosContainer />
@@ -18,7 +18,7 @@ export default function SearchBar(props) {
 				{/* Right part of navbar - action items icons */}
 				<ActionItemsContainer logout={props.logout} />
 			</StyledSearchBar>
-		</StyledEnvironmentContainer>
+		</Header>
 	);
 }
 
@@ -35,7 +35,7 @@ const StyledSearchBar = styled.div`
 	flex-direction: row;
 `;
 
-const StyledEnvironmentContainer = styled.div`
+const Header = styled.header`
 	box-sizing: border-box;
 	background-color: white;
 	width: 100%;
