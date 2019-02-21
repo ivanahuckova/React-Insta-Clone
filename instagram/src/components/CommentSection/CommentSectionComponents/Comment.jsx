@@ -2,17 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-import "../CommentSection.css";
+import StyledUsername from "../../Styles/Reusables/StyledUsername";
 
 export default function Comment(props) {
 	const username = props.comment.username;
 	const text = props.comment.text;
 	return (
 		<StyledCommentBox>
-			<div>
-				<span className="comments-username">{username}</span>
-				{text}
-			</div>
+			<StyledUsername>{username} </StyledUsername>
+			{text}
 		</StyledCommentBox>
 	);
 }

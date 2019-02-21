@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledUsername = styled.div`
+const StyledUsername = styled.span`
 	font-weight: 800;
 `;
 
