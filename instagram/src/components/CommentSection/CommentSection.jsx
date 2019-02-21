@@ -1,14 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 //components
 import ActionItemsContainer from "./CommentSectionComponents/ActionItemsContainer";
 import LikesContainer from "./CommentSectionComponents/LikesContainer";
 import Comment from "./CommentSectionComponents/Comment";
 import NewComment from "./CommentSectionComponents/NewComment";
-
-//css
-import "./CommentSection.css";
 
 export default class CommentSection extends React.Component {
 	constructor(props) {
@@ -56,26 +54,24 @@ export default class CommentSection extends React.Component {
 
 	render() {
 		return (
-			<div className="commentsection-container">
-				<div className="commentsection-icons-likes-container">
-					<ActionItemsContainer didLike={this.state.didLike} toggleLike={this.toggleLike} />
-					<LikesContainer likes={this.state.likes} />
+			<StyledCommentSectionContainer>
+				<ActionItemsContainer didLike={this.state.didLike} toggleLike={this.toggleLike} />
+				<LikesContainer likes={this.state.likes} />
 
-					{/* Comment Component: Creating new comment for each comment => mapping through comments array and creatin new Comment component*/}
-					{this.state.comments.map((comment, idx) => {
-						return <Comment comment={comment} key={idx} />;
-					})}
+				{/* Comment Component: Creating new comment for each comment => mapping through comments array and creatin new Comment component*/}
+				{this.state.comments.map((comment, idx) => {
+					return <Comment comment={comment} key={idx} />;
+				})}
 
-					{/* ANewComment Component: Add new comment section and component*/}
+				{/* ANewComment Component: Add new comment section and component*/}
 
-					<NewComment
-						addNewComment={this.addNewComment}
-						inputCommentValue={this.state.inputCommentValue}
-						handleAddNewInput={this.handleAddNewInput}
-						clearInput={this.clearInput}
-					/>
-				</div>
-			</div>
+				<NewComment
+					addNewComment={this.addNewComment}
+					inputCommentValue={this.state.inputCommentValue}
+					handleAddNewInput={this.handleAddNewInput}
+					clearInput={this.clearInput}
+				/>
+			</StyledCommentSectionContainer>
 		);
 	}
 }
@@ -85,3 +81,8 @@ CommentSection.propTypes = {
 	likes: PropTypes.number.isRequired,
 	username: PropTypes.string
 };
+
+const StyledCommentSectionContainer = styled.div`
+	background-color: white;
+	padding: 0 10px 5px 10px;
+`;

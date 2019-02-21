@@ -1,35 +1,6 @@
-/* CommentSection.jsx full container */
-.commentsection-container {
-	background-color: white;
-}
-
-/* LikesContainer.jsx container */
-.commentsection-icons-likes-container {
-	padding: 0 10px 5px 10px;
-}
-
 .likes {
 	font-weight: bold;
 	padding-bottom: 10px;
-}
-
-/* ActionItems.jsx container */
-.commentsection-icons-container {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.commentsection-icon {
-	width: 7%;
-	height: 7%;
-	padding: 10px 10px 10px 0;
-	margin-left: -10px;
-	cursor: pointer;
-}
-.bubble {
-	width: 7%;
-	height: 7%;
 }
 
 .display-true {

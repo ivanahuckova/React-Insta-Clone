@@ -1,18 +1,28 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-//css
-import "../PostContainer.css";
+import styled from "styled-components";
 
 export default function ImageContainer(props) {
 	const imageUrl = props.imageUrl;
 	return (
-		<div className="post-image-container">
-			<img className="post-image" src={imageUrl} alt="users added" />
-		</div>
+		<StyledImageContainer>
+			<StyledImage src={imageUrl} alt="users added" />
+		</StyledImageContainer>
 	);
 }
 
 ImageContainer.prototype = {
 	imageUrl: PropTypes.string.isRequired
 };
+
+const StyledImageContainer = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+`;
+
+const StyledImage = styled.img`
+	width: 100%;
+`;

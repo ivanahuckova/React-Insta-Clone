@@ -1,14 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-//css
-import "../PostContainer.css";
+import styled from "styled-components";
 
 export default function TimeStamp(props) {
 	const timestamp = props.timestamp;
-	return <div className="timestamp">{timestamp}</div>;
+	return <StyledTimeStamp>{timestamp}</StyledTimeStamp>;
 }
 
 TimeStamp.prototype = {
 	timestamp: PropTypes.string.isRequired
 };
+
+const StyledTimeStamp = styled.div`
+	color: #b9b8b7;
+	font-weight: lighter;
+	padding: 20px 0 0 10px;
+`;

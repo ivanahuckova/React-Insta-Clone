@@ -8,9 +8,6 @@ import ImageContainer from "./components/ImageContainer";
 import TimeStamp from "./components/TimeStamp";
 import CommentSection from "../CommentSection/CommentSection";
 
-//css
-import "./PostContainer.css";
-
 export default function PostContainer(props) {
 	return (
 		<StyledPostContainer>
