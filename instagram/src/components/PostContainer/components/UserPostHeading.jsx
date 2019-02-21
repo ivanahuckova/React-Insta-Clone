@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 //css
-import "../PostContainer.css";
+import StyledUsername from "../../Styles/Reusables/StyledUsername";
 
 export default function UserPostHeading(props) {
 	const username = props.username;
@@ -33,8 +33,4 @@ const StyledThumbnail = styled.img`
 	border-radius: 50%;
 	width: 5%;
 	height: 5%;
-`;
-
-const StyledUsername = styled.div`
-	font-weight: 800;
 `;
