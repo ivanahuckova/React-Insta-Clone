@@ -16,7 +16,7 @@ export default function LoginPage(props) {
 	return (
 		<form onSubmit={login}>
 			Name: <input value={loginName} onChange={handleAddNameInput} />
-			Password: <input value={loginPassword} onChange={handleAddPasswordInput} />
+			Password: <input value={loginPassword} type="password" onChange={handleAddPasswordInput} />
 			<button type="button" disabled={!isEnabled} onClick={login}>
 				Submit
 			</button>
