@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import dummyData from "../../dummy-data.js";
+import styled from "styled-components";
+
+//components
 import PostContainer from "../PostContainer/PostContainer";
 import SearchBar from "../SearchBar/SearchBar";
-import "./PostsPage.css";
 
 export default class PostsPage extends Component {
 	constructor(props) {
@@ -34,8 +36,8 @@ export default class PostsPage extends Component {
 			<div>
 				{/* Search Bar */}
 				<SearchBar searchValue={this.state.searchValue} handleSearch={this.handleSearch} logout={this.props.logout} />
-				<div className="environment-container">
-					<div className="app-container">
+				<StyledPostPageContainer>
+					<StyledPostContainer>
 						{/* Post Container + filter/search logic */}
 						{this.state.dummyData.map(post => {
 							if (post.username.indexOf(this.state.searchValue) === -1) {
@@ -43,9 +45,23 @@ export default class PostsPage extends Component {
 							}
 							return <PostContainer post={post} key={post.timestamp} username={this.props.username} />;
 						})}
-					</div>
-				</div>
+					</StyledPostContainer>
+				</StyledPostPageContainer>
 			</div>
 		);
 	}
 }
+
+const StyledPostPageContainer = styled.div`
+	padding-top: 110px;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	background-color: #fafafa;
+`;
+
+const StyledPostContainer = styled.div`
+	margin: 20px 0;
+	width: 50%;
+	background-color: white;
+`;

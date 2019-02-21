@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import LoginPage from "./components/LoginPage/LoginPage";
 import Authenticate from "./components/Authentication/Authenticate";
 import PostsPage from "./components/PostPage/PostsPage";
-import "./App.css";
 
 class Posts extends Component {
 	render() {
