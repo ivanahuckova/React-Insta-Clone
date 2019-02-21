@@ -2,9 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-//css
-import "../SearchBar.css";
-
 export default function SearchContainer(props) {
 	const searchValue = props.searchValue;
 	const handleSearch = event => props.handleSearch(event.target.value);
