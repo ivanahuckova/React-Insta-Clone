@@ -1,0 +1,8 @@
+.display-true {
+	display: block;
+	cursor: pointer;
+}
+
+.display-none {
+	display: none;
+}
